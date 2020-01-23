@@ -36,6 +36,10 @@ function te
     command touch $argv; typora $argv
 end
 
+function brb
+    command fish -c "cd ~/dev/berightback/; ./fullscreen_lock.sh"
+end
+
 bass source '/home/vin/Downloads/google-cloud-sdk/path.bash.inc'
 
 bass source '/home/vin/Downloads/google-cloud-sdk/completion.bash.inc'
