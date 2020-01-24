@@ -40,6 +40,14 @@ function brb
     command fish -c "cd ~/dev/berightback/; ./fullscreen_lock.sh"
 end
 
+function db
+    command ~/disconnect_bluetooth.sh
+end
+
+function cb
+    command ~/u8i_connect.sh
+end
+
 bass source '/home/vin/Downloads/google-cloud-sdk/path.bash.inc'
 
 bass source '/home/vin/Downloads/google-cloud-sdk/completion.bash.inc'
