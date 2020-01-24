@@ -27,6 +27,11 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 " Make statusline appear even with only single window.
-set laststatus=2
+" set laststatus=2
+
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
 
 " vim: set ft=vim foldmethod=marker ts=4 sw=4 tw=80 et :
