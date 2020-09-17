@@ -17,14 +17,14 @@
     (org-w3m org-bbdb org-bibtex org-docview org-gnus org-info org-irc org-mhe org-rmail org-eww org-habit)))
  '(package-selected-packages
    (quote
-    (ir-black-theme dash-functional org-mind-map org-bullets free-keys org-journal orgalist org-edna)))
+    (helm-descbinds ir-black-theme dash-functional org-mind-map org-bullets free-keys org-journal orgalist org-edna)))
  '(safe-local-variable-values (quote ((buffer-auto-save-file-name)))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(default ((t (:family "JetBrains Mono" :foundry "JB  " :slant normal :weight normal :height 99 :width normal)))))
 
 (require 'package)
 
@@ -59,7 +59,7 @@ There are two things you can do about this warning:
                              (visual-line-mode)
                              (org-indent-mode)))
 
-(setq default-directory "/media/vin/Windows/Users/Thomas/Documents/" )
+(setq default-directory "~/Dropbox/" )
 
 (setq redisplay-dont-pause t
   scroll-margin 1
@@ -85,7 +85,7 @@ There are two things you can do about this warning:
 
 ; (setq org-expiry-inactive-timestamps t)
 
-(setq org-journal-dir "/media/vin/Windows/Users/Thomas/Documents/org/journal/")
+(setq org-journal-dir "~/Dropbox/org/journal")
 (setq org-journal-file-format  "%m_%d_%Y.org")
 
 (require 'org-bullets)
@@ -176,10 +176,10 @@ There are two things you can do about this warning:
 )
 (require 'org-clock)
 
-(setq org-directory "/media/vin/Windows/Users/Thomas/Documents/")
-(setq org-default-notes-file "/media/vin/Windows/Users/Thomas/Documents/org/swap.org")
-(defvar org-default-journal-file "/media/vin/Windows/Users/Thomas/Documents/org/journal.org")
-(setq org-agenda-files (list "/media/vin/Windows/Users/Thomas/Documents/org/swap.org" "/media/vin/Windows/Users/Thomas/Documents/org/next.org" "/media/vin/Windows/Users/Thomas/Documents/org/tickler.org"))
+(setq org-directory "~/Dropbox")
+(setq org-default-notes-file "~/Dropbox/org/swap.org")
+(defvar org-default-journal-file "/Dropbox/org/journal.org")
+(setq org-agenda-files (list "~/Dropbox/org/swap.org" "~/Dropbox/org/next.org" "~/Dropbox/org/tickler.org"))
 (global-set-key (kbd "C-c c") 'org-capture)
 
 (setq org-columns-default-format "%50ITEM(Task) %10CLOCKSUM %16TIMESTAMP_IA")
@@ -223,20 +223,25 @@ There are two things you can do about this warning:
 
 ;; Define the custum capture templates
 (setq org-capture-templates
-      '(("s" "Swap" entry (file+headline "/media/vin/Windows/Users/Thomas/Documents/org/swap.org" "Swap space")
+      '(("s" "Swap" entry (file+headline "~/Dropbox/org/swap.org" "Swap space")
          "* TODO %?\n  %i\n")
         ("j" "Journal entry" entry (function org-journal-find-location)
          "* %(format-time-string org-journal-time-format)%^{Title}\n%i%?")))
 
-(setq org-refile-targets '((nil :maxlevel . 9)
-                           (org-agenda-files :maxlevel . 9)))
+(setq org-refile-targets '((nil :maxlevel . 9) ("~/Dropbox/org/someday.org" :maxlevel . 1 ) ("~/Dropbox/org/backburner.org" :maxlevel . 1 ) (org-agenda-files :maxlevel . 9)))
 (setq org-outline-path-complete-in-steps nil)         ; Refile in a single go
 (setq org-refile-use-outline-path t)                  ; Show full paths for refiling
 
 (require 'ox-org)
 (require 'org-mind-map)
 
-(tool-bar-mode -1)
-(menu-bar-mode -1)
+;; (tool-bar-mode -1)
+;; (menu-bar-mode -1)
 
 (load-theme 'ir-black t)
+(set-face-attribute 'default (selected-frame) :height 100)
+
+(global-set-key (kbd "H-k") 'previous-line)
+(global-set-key (kbd "H-j") 'next-line)
+(global-set-key (kbd "H-h") 'left-char)
+(global-set-key (kbd "H-l") 'right-char)

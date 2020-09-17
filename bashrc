@@ -154,7 +154,8 @@ alias python=python3
 export PATH="$PATH:$HOME/Android/Sdk/platform-tools"
 
 # Drop into fish shell
-if [[ $(ps --no-header --pid=$PPID --format=cmd) != "fish" ]]
+# if [[ $(ps --no-header --pid=$PPID --format=cmd) != "fish" ]] && [[ "$TERM" == "xterm-kitty" || "$TERM" == "screen" ]]
+if [[ $(ps --no-header --pid=$PPID --format=cmd) != "fish" ]] && [[ "$TERM" == "xterm-kitty" ]]
 then
     exec fish
 fi

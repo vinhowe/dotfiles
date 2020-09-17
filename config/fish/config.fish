@@ -1,7 +1,7 @@
 fenv source ~/.profile
 
 function l
-    command ls -CF $argv
+    command ls --color -CF $argv
 end
 
 function ..
@@ -14,6 +14,27 @@ end
 
 function sj
 	builtin cd /home/vin/dev/lifesystem/spec; . ../venv/bin/activate.fish; python sj.py $argv; deactivate; cd -
+end
+
+function per
+    builtin cd /home/vin/dev/lifesystem; . venv/bin/activate.fish; python app.py s; deactivate; cd -
+end
+
+function jour
+    builtin cd /home/vin/dev/lifesystem; . venv/bin/activate.fish; python app.py p j; deactivate; cd -
+end
+
+function plan 
+    builtin cd /home/vin/dev/lifesystem; . venv/bin/activate.fish; python app.py p $argv; deactivate; cd -
+end
+
+function log 
+    builtin cd /home/vin/dev/lifesystem; . venv/bin/activate.fish; python log_app.py; deactivate; cd -
+end
+
+function cl
+    setxkbmap -option caps:swapescape
+    xdotool key Caps_Lock
 end
 
 function rules
@@ -60,9 +81,12 @@ function fish_user_key_bindings
     for mode in insert default visual
         bind -M $mode \cf forward-char
     end
+
+    fish_default_key_bindings -M default
+
+    fish_vi_key_bindings default
 end
 
-fish_vi_key_bindings
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
