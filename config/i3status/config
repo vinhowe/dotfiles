@@ -12,9 +12,7 @@ general {
 }
 
 # order += "ipv6"
-order += "wireless _first_"
 order += "ethernet _first_"
-order += "battery all"
 order += "disk /"
 # order += "load"
 order += "cpu_usage" 
@@ -27,19 +25,9 @@ ipv6 {
         format_down = "📍 no ip"
 }
 
-wireless _first_ {
-        format_quality = "%02d%s"
-        format_up = "📶 (%quality at %essid) %ip"
-        format_down = "📶 wifi down"
-}
-
 ethernet _first_ {
         format_up = "🌐 %ip (%speed)"
         format_down = ""
-}
-
-battery all {
-        format = "🔋 %status %percentage %remaining"
 }
 
 disk "/" {
