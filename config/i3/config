@@ -44,7 +44,7 @@ bindsym Mod1+Tab workspace back_and_forth
 exec --no-startup-id setxkbmap -option caps:swapescape
 
 # start a terminal
-# bindsym $mod+Return exec kitty
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
