@@ -22,6 +22,7 @@ exec --no-startup-id compton -b
 exec --no-startup-id nm-applet
 exec --no-startup-id volumeicon
 exec --no-startup-id redshift-gtk
+exec --no-startup-id dropbox start
 exec --no-startup-id blueman-applet
 exec --no-startup-id jetbrains-toolbox --minimize
 exec --no-startup-id gnome-pomodoro --no-default-window
