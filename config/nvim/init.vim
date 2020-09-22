@@ -14,7 +14,7 @@ Plug 'davidhalter/jedi-vim'
 Plug 'scrooloose/nerdtree'
 Plug 'neomake/neomake'
 Plug 'machakann/vim-highlightedyank'
-Plug 'morhetz/gruvbox'
+Plug 'whatyouhide/vim-gotham'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-sleuth'
 
@@ -27,7 +27,7 @@ let g:jedi#completions_enabled = 0
 let g:jedi#use_splits_not_buffers = "right"
 
 let g:deoplete#enable_at_startup = 1
-" " Enable alignment
+" Enable alignment
 let g:neoformat_basic_format_align = 1
 
 " Enable tab to spaces conversion
@@ -39,8 +39,6 @@ let g:neoformat_basic_format_trim = 1
 let g:neomake_python_enabled_makers = ['pylint']
 
 call neomake#configure#automake('nrwi', 500)
-colorscheme gruvbox
-set background=dark " use dark mode
 
 let mapleader=","
 " so that we can keep the , key's functionality
@@ -75,6 +73,10 @@ filetype plugin indent on
 " set shiftwidth=4
 " set expandtab
 set mouse=a
+
+set background=dark
+set termguicolors
+colorscheme gotham
 
 map <C-K> :pyf ~/.config/nvim/clang-format.py<cr>
 imap <C-K> <c-o>:pyf ~/.config/nvim/clang-format.py<cr>
