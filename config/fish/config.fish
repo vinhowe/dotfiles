@@ -1,4 +1,5 @@
 fenv source ~/.profile
+fenv source ~/.nvm/nvm.sh
 
 function l
     command ls --color -CF $argv
@@ -19,6 +20,7 @@ end
 function per
     builtin cd /home/vin/dev/lifesystem; . venv/bin/activate.fish; python app.py s; deactivate; cd -
 end
+eval sh $HOME/.config/gotham/gotham.sh
 
 function jour
     builtin cd /home/vin/dev/lifesystem; . venv/bin/activate.fish; python app.py p j; deactivate; cd -
@@ -95,6 +97,8 @@ function fish_user_key_bindings
     fish_default_key_bindings -M default
 
     fish_vi_key_bindings default
+function icat
+    kitty +kitten icat --align=left $argv
 end
 
 
@@ -102,3 +106,6 @@ end
 # !! Contents within this block are managed by 'conda init' !!
 eval /home/vin/anaconda3/bin/conda "shell.fish" "hook" $argv | source
 # <<< conda initialize <<<
+function vi
+    nvim $argv
+end
