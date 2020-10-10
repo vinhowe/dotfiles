@@ -30,6 +30,10 @@ function jupyterlab-app
     google-chrome --app="http://0.0.0.0:8888/lab?token=$argv"
 end
 
+function icat
+    kitty +kitten icat --align=left $argv
+end
+
 function plan 
     builtin cd /home/vin/dev/lifesystem; . venv/bin/activate.fish; python app.py p $argv; deactivate; cd -
 end
