@@ -19,6 +19,12 @@ function per
     builtin cd /home/vinhowe/dev/lifesystem; . venv/bin/activate.fish; python app.py s; deactivate
 end
 
+# Thanks http://christopherroach.com/articles/jupyterlab-desktop-app/
+# I can finally use ctrl + w
+function jupyterlab-app
+    google-chrome --app="http://0.0.0.0:8888/lab?token=$argv"
+end
+
 function icat
     kitty +kitten icat --align=left $argv
 end
