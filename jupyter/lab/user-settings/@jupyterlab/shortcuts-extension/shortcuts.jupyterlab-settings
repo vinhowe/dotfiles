@@ -5,7 +5,7 @@
             "keys": [
                 "Accel W"
             ],
-            "selector": "body"
+            "selector": ".jp-Notebook.jp-mod-commandMode"
         },
     ]
 }
