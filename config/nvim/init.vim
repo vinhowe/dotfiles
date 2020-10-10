@@ -79,6 +79,3 @@ set mouse=a
 set background=dark
 set termguicolors
 colorscheme gotham
-
-map <C-K> :pyf ~/.config/nvim/clang-format.py<cr>
-imap <C-K> <c-o>:pyf ~/.config/nvim/clang-format.py<cr>
