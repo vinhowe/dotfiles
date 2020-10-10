@@ -1,0 +1,11 @@
+{
+    "shortcuts": [
+        {
+            "command": "",
+            "keys": [
+                "Accel W"
+            ],
+            "selector": "body"
+        },
+    ]
+}
