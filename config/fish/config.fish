@@ -111,3 +111,7 @@ eval /home/vin/anaconda3/bin/conda "shell.fish" "hook" $argv | source
 function vi
     nvim $argv
 end
+
+function til
+    builtin cd /home/vinhowe/dev/website/; python til.py $argv
+end
