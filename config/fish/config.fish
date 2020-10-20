@@ -40,3 +40,7 @@ end
 function plan 
     builtin cd /home/vinhowe/dev/lifesystem; . venv/bin/activate.fish; python app.py p $argv; deactivate
 end
+
+function til
+    builtin cd /home/vinhowe/dev/website/; python til.py $argv
+end
