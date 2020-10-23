@@ -11,7 +11,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'machakann/vim-sandwich'
 Plug 'scrooloose/nerdtree'
 Plug 'machakann/vim-highlightedyank'
-Plug 'whatyouhide/vim-gotham'
+Plug 'vinhowe/vim-gotham'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-sleuth'
 
