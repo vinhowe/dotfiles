@@ -1,11 +1,17 @@
 [commit]
-	gpgsign = false
+	gpgsign = true
 [merge]
 	tool = vimdiff
 [diff]
 	tool = vimdiff
 [difftool]
 	prompt = false
+[core]
+	editor = nvim
+[init]
+	defaultBranch = main
+[pull]
+	rebase = false
 [include]
 	; https://stackoverflow.com/questions/1557183/is-it-possible-to-include-a-file-in-your-gitconfig
 	path = ~/.user.gitconfig
