@@ -262,7 +262,6 @@ bar {
 }
 
 
-assign [class="kitty"] $ws3
 assign [class="Slack"] $ws6
 assign [class="Signal"] $ws6
 
