@@ -97,6 +97,8 @@ function fish_user_key_bindings
     fish_default_key_bindings -M default
 
     fish_vi_key_bindings default
+end
+
 function icat
     kitty +kitten icat --align=left $argv
 end
