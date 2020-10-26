@@ -27,7 +27,7 @@ exec --no-startup-id blueman-applet
 exec --no-startup-id jetbrains-toolbox --minimize
 exec --no-startup-id gnome-pomodoro --no-default-window
 
-set $lock_cmd env XSECURELOCK_SAVER=saver_mpv XSECURELOCK_DISCARD_FIRST_KEYPRESS=0 XSECURELOCK_FONT="JetBrains Mono" XSECURELOCK_PASSWORD_PROMPT=time_hex XSECURELOCK_IMAGE_DURATION_SECONDS=65536 XSECURELOCK_LIST_VIDEOS_COMMAND="find ~/Pictures/small-sombrero.jpg" XSECURELOCK_AUTH_FOREGROUND_COLOR="#98d1ce" XSECURELOCK_AUTH_BACKGROUND_COLOR="#0c1014" XSECURELOCK_AUTH_SOUNDS=1 XSECURELOCK_BLANK_TIMEOUT=300 xsecurelock
+set $lock_cmd env XSECURELOCK_DISCARD_FIRST_KEYPRESS=0 XSECURELOCK_FONT="JetBrains Mono" XSECURELOCK_PASSWORD_PROMPT=time_hex XSECURELOCK_IMAGE_DURATION_SECONDS=65536 XSECURELOCK_AUTH_FOREGROUND_COLOR="#98d1ce" XSECURELOCK_AUTH_BACKGROUND_COLOR="#0c1014" XSECURELOCK_AUTH_SOUNDS=1 XSECURELOCK_BLANK_TIMEOUT=300 XSECURELOCK_NO_COMPOSITE=1 xsecurelock
 exec --no-startup-id xss-lock -n /usr/local/libexec/xsecurelock/dimmer -l -- $lock_cmd
 
 exec --no-startup-id /home/vin/.screenlayout/home.sh
