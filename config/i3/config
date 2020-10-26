@@ -278,8 +278,6 @@ exec --no-startup-id signal-desktop
 exec i3-msg "workspace $ws2; append_layout /home/vin/.config/i3/workspace-2-updated.json"
 
 exec --no-startup-id sudo service ddclient start
- 
-exec --no-startup-id ~/.config/i3/emacs_startup.sh
 
 workspace $ws1 output HDMI1
 
