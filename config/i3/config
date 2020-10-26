@@ -247,6 +247,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
+	i3bar_command i3bar -t
 
         tray_output eDP1 
 
