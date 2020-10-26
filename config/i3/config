@@ -18,7 +18,7 @@ font pango:JetBrains Mono 7
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-exec --no-startup-id compton --config ~/.config/compton/compton.conf -b
+exec --no-startup-id picom --config ~/.config/picom/picom.conf -b
 exec --no-startup-id nm-applet
 exec --no-startup-id pasystray -r
 exec --no-startup-id redshift-gtk
