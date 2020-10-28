@@ -113,5 +113,5 @@ function vi
 end
 
 function til
-    builtin cd /home/vinhowe/dev/website/; python til.py $argv
+    builtin cd /home/vin/dev/website/; python til.py $argv
 end
