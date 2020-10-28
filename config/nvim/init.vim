@@ -14,6 +14,8 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'vinhowe/vim-gotham'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-sleuth'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
 
 call plug#end()
 
