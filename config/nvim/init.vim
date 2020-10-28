@@ -1,11 +1,9 @@
 " config based on https://jdhao.github.io/2018/12/24/centos_nvim_install_use_guide_en
 call plug#begin('~/.local/share/nvim/plugged')
 
-Plug 'davidhalter/jedi-vim'
 Plug 'vim-airline/vim-airline'
 " Completes quote marks and such for you
 Plug 'jiangmiao/auto-pairs'
-" Something with comments--idk
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdcommenter'
 Plug 'machakann/vim-sandwich'
