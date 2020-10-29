@@ -140,7 +140,12 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws0 "0"
 
-bindsym $mod+m [workspace=$ws1] move workspace to output eDP1; \
+# Reload screen layout
+bindsym $mod+Shift+m exec --no-startup-id ~/.screenlayout/home.sh w
+
+# Move all workspaces (except 1) to to laptop
+bindsym $mod+m exec --no-startup-id ~/.screenlayout/home.sh \
+[workspace=$ws0] move workspace to output eDP1; \
 [workspace=$ws2] move workspace to output eDP1; \
 [workspace=$ws3] move workspace to output eDP1; \
 [workspace=$ws4] move workspace to output eDP1; \
@@ -149,18 +154,8 @@ bindsym $mod+m [workspace=$ws1] move workspace to output eDP1; \
 [workspace=$ws7] move workspace to output eDP1; \
 [workspace=$ws8] move workspace to output eDP1; \
 [workspace=$ws9] move workspace to output eDP1; \
-workspace $ws1
-
-bindsym $mod+Shift+m [workspace=$ws1] move workspace to output HDMI1; \
-[workspace=$ws2] move workspace to output HDMI1; \
-[workspace=$ws3] move workspace to output HDMI1; \
-[workspace=$ws4] move workspace to output HDMI1; \
-[workspace=$ws5] move workspace to output HDMI1; \
-[workspace=$ws6] move workspace to output HDMI1; \
-[workspace=$ws7] move workspace to output HDMI1; \
-[workspace=$ws8] move workspace to output HDMI1; \
-[workspace=$ws9] move workspace to output HDMI1; \
-workspace $ws1
+workspace $ws0 \
+reload
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
