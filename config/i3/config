@@ -13,7 +13,7 @@ floating_modifier $mod
 # is used in the bar {} block below.
 font pango:JetBrains Mono 7
 # }}}
-   
+
 # workspace config {{{
 set $ws1 "1"
 set $ws2 "2"
@@ -34,7 +34,7 @@ workspace $ws1 output HDMI1
 assign [class="Slack"] $ws6
 assign [class="Signal"] $ws6
 # }}}
- 
+
 # startup applications {{{
 
 # background {{{
@@ -53,7 +53,7 @@ exec --no-startup-id xinput --set-prop "Logitech USB Optical Mouse" 311 0.8
 # swap caps lock and escape
 exec --no-startup-id setxkbmap -option caps:swapescape
 # }}}
- 
+
 # foreground {{{
 exec --no-startup-id google-chrome
 exec --no-startup-id kitty
@@ -62,7 +62,7 @@ exec --no-startup-id kitty
 exec --no-startup-id slack -u
 exec --no-startup-id signal-desktop --start-in-tray
 # }}}
- 
+
 # }}}
 
 # keybinds {{{
@@ -109,7 +109,7 @@ bindsym $mod+d exec rofi -show run -dpi 1
 # }}}
 
 # window control {{{
- 
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -165,7 +165,7 @@ bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
- 
+
 # resize window (you can also use the mouse for this)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -247,7 +247,7 @@ reload
 bindsym $mod+Shift+braceright move workspace to output right
 bindsym $mod+Shift+braceleft move workspace to output left
 # }}}
- 
+
 # session control {{{
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -256,7 +256,7 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exit
 # }}}
- 
+
 # }}}
 
 # theme {{{
@@ -284,7 +284,7 @@ bar {
         status_command i3status
 	i3bar_command i3bar -t
 
-        tray_output eDP1 
+        tray_output eDP1
 
         colors {
             background          $bg
@@ -297,7 +297,7 @@ bar {
         }
 }
 # }}}
- 
+
 # (do this last) screen output layout {{{
 exec --no-startup-id ~/.screenlayout/auto_screen.sh
 # }}}
