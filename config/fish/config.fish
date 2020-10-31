@@ -5,7 +5,8 @@ eval sh $HOME/.config/gotham/gotham.sh
 
 set fish_greeting
 
-set -Ux EDITOR vim
+set -Ux EDITOR nvim
+setenv EDITOR nvim
 
 function fish_user_key_bindings
     for mode in insert default visual
