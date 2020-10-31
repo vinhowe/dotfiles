@@ -66,11 +66,15 @@ exec --no-startup-id signal-desktop --start-in-tray
 # }}}
 
 # keybinds {{{
- 
-# XF86 controls {{{ 
-# change screen brightness
+
+# XF86 controls {{{
+# change laptop screen brightness
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+
+# change external monitor brightness (ddc is sooo finicky and slow)
+bindsym Shift+XF86MonBrightnessUp exec ~/.screenlayout/relative_ddc_brightness.sh 100
+bindsym Shift+XF86MonBrightnessDown exec ~/.screenlayout/relative_ddc_brightness.sh -100
 
 # change volume
 set $refresh_i3status killall -SIGUSR1 i3status
