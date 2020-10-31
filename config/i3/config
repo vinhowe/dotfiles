@@ -26,8 +26,9 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws0 "0"
 
-# force bind workspace 0 to laptop screen for consistency's sake
+# force bind workspace 0 to laptop screen, 1 to external screen for consistency's sake
 workspace $ws0 output eDP1
+workspace $ws1 output HDMI1
 
 # banish messaging apps to screen 6
 assign [class="Slack"] $ws6
