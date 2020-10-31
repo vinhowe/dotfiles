@@ -33,7 +33,7 @@ workspace $ws1 output HDMI1
 # banish messaging apps to screen 6
 assign [class="Slack"] $ws6
 assign [class="Signal"] $ws6
-#: }}}
+# }}}
  
 # startup applications {{{
 
@@ -52,7 +52,7 @@ exec --no-startup-id xss-lock -n /usr/local/libexec/xsecurelock/dimmer -l -- $lo
 exec --no-startup-id xinput --set-prop "Logitech USB Optical Mouse" 311 0.8
 # swap caps lock and escape
 exec --no-startup-id setxkbmap -option caps:swapescape
-#: }}}
+# }}}
  
 # foreground {{{
 exec --no-startup-id google-chrome
@@ -61,9 +61,9 @@ exec --no-startup-id kitty
 # start Slack and Signal minimized:
 exec --no-startup-id slack -u
 exec --no-startup-id signal-desktop --start-in-tray
-#: }}}
+# }}}
  
-#: }}}
+# }}}
 
 # keybinds {{{
  
@@ -102,7 +102,7 @@ bindsym $mod+Return exec kitty
 
 # start rofi (a program launcher)
 bindsym $mod+d exec rofi -show run -dpi 1
-#: }}}
+# }}}
 
 # window control {{{
  
@@ -188,9 +188,9 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-#: }}}
+# }}}
 
-#: workspace control {{{
+# workspace control {{{
 # switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
@@ -219,9 +219,9 @@ bindsym $mod+Shift+grave move container to workspace $ws0
 
 # switch between two most recent workspaces
 bindsym Mod1+Tab workspace back_and_forth
-#: }}}
+# }}}
 
-#: output control {{{
+# output control {{{
 # reload screen layout
 bindsym $mod+Shift+m exec --no-startup-id ~/.screenlayout/auto_screen.sh w
 
@@ -242,20 +242,20 @@ reload
 # move workspaces to different monitors
 bindsym $mod+Shift+braceright move workspace to output right
 bindsym $mod+Shift+braceleft move workspace to output left
-#: }}}
+# }}}
  
-#: session control {{{
+# session control {{{
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 in-place (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exit
-#: }}}
+# }}}
  
-#: }}}
+# }}}
 
-#: theme {{{
+# theme {{{
 # colors for minimal, usable theme
 set $bg     #020202
 set $fg     #9f9f9f
@@ -273,10 +273,9 @@ client.focused                $ge        $ge         $tx
 client.unfocused              $bg        $bg         $ia
 client.focused_inactive       $bg        $bg         $ac
 client.urgent                 $rd        $rd         $tx
+# }}}
 
-#: }}}
-
-#: i3bar config {{{
+# i3bar config {{{
 bar {
         status_command i3status
 	i3bar_command i3bar -t
@@ -293,7 +292,7 @@ bar {
             urgent_workspace    $rd        $rd        $tx
         }
 }
-#: }}}
+# }}}
  
 # (do this last) screen output layout {{{
 exec --no-startup-id ~/.screenlayout/auto_screen.sh
