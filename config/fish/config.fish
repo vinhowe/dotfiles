@@ -1,6 +1,10 @@
 fenv source ~/.profile
 fenv source ~/.nvm/nvm.sh
 
+set -Ux EDITOR nvim
+setenv EDITOR nvim
+
+
 function l
     command ls --color -CF $argv
 end
