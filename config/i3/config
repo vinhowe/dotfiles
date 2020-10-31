@@ -46,7 +46,6 @@ exec --no-startup-id blueman-applet
 exec --no-startup-id jetbrains-toolbox --minimize
 exec --no-startup-id gnome-pomodoro --no-default-window
 exec --no-startup-id clipit
-exec --no-startup-id /home/vin/.screenlayout/auto_screen.sh
 exec --no-startup-id xss-lock -n /usr/local/libexec/xsecurelock/dimmer -l -- $lock_cmd
 # make mouse more sensitive with high dpi screen
 exec --no-startup-id xinput --set-prop "Logitech USB Optical Mouse" 311 0.8
@@ -274,7 +273,6 @@ client.unfocused              $bg        $bg         $ia
 client.focused_inactive       $bg        $bg         $ac
 client.urgent                 $rd        $rd         $tx
 
-exec --no-startup-id sleep 2 && feh --bg-fill /home/vin/Pictures/opo0328a.jpg
 #: }}}
 
 #: i3bar config {{{
@@ -295,3 +293,7 @@ bar {
         }
 }
 #: }}}
+ 
+# (do this last) screen output layout {{{
+exec --no-startup-id ~/.screenlayout/auto_screen.sh
+# }}}
