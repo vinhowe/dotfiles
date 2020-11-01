@@ -14,6 +14,7 @@ Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-sleuth'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
+Plug 'dag/vim-fish'
 
 call plug#end()
 
