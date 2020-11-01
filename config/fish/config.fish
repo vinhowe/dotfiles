@@ -40,11 +40,11 @@ function icat
     kitty +kitten icat --align=left $argv
 end
 
-function plan 
+function plan
     builtin cd /home/vin/dev/lifesystem; . venv/bin/activate.fish; python app.py p $argv; deactivate; cd -
 end
 
-function log 
+function log
     builtin cd /home/vin/dev/lifesystem; . venv/bin/activate.fish; python log_app.py; deactivate; cd -
 end
 
@@ -119,3 +119,46 @@ end
 function til
     builtin cd /home/vin/dev/website/blog/; python til.py $argv
 end
+
+function execute_prodlock
+    if cat ~/.prodlock/profile | string match -rq '^productive'
+    	reset_return_bindings
+    	set cmd (commandline)
+        commandline ""
+        commandline -f repaint
+    	echo
+	bind -M insert \e ""
+	set fish_bind_mode insert
+	trap "prodlock_return_bindings; fish_user_key_bindings; bind -e -M insert \e" SIGINT
+	read -l -P "prodlock on; is this productive? [y/n] " choice
+	switch $choice
+	    case Y y
+	        commandline $cmd
+		commandline -f repaint
+		commandline -f execute
+	end
+	prodlock_return_bindings
+	fish_user_key_bindings
+	bind -e -M insert \e
+    else
+        commandline -f execute
+    end
+end
+
+function reset_return_bindings
+    for mode in insert default visual
+        bind --all -e -M $mode \r
+        bind --all -e -M $mode \n
+    end
+end
+
+function prodlock_return_bindings
+    for mode in insert default visual
+        bind -M $mode \r execute_prodlock
+        bind -M $mode \n execute_prodlock
+    end
+    bind -M normal :q execute_prodlock
+    bind -M normal :wq execute_prodlock
+end
+
+prodlock_return_bindings
