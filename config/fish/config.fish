@@ -14,11 +14,11 @@ function ..
 end
 
 function lj
-	builtin cd /home/vin/dev/lifesystem/journal; . ../venv/bin/activate.fish; python lj.py $argv; deactivate; cd -
+    builtin cd /home/vin/dev/lifesystem/journal; . ../venv/bin/activate.fish; python lj.py $argv; deactivate; cd -
 end
 
 function sj
-	builtin cd /home/vin/dev/lifesystem/spec; . ../venv/bin/activate.fish; python sj.py $argv; deactivate; cd -
+    builtin cd /home/vin/dev/lifesystem/spec; . ../venv/bin/activate.fish; python sj.py $argv; deactivate; cd -
 end
 
 function per
@@ -122,18 +122,18 @@ end
 
 function execute_prodlock
     if cat ~/.prodlock/profile | string match -rq '^productive'
-    	reset_return_bindings
-    	set cmd (commandline)
-        commandline ""
-        commandline -f repaint
-    	echo
+	reset_return_bindings
+	set cmd (commandline)
+	commandline ""
+	commandline -f repaint
+	echo
 	bind -M insert \e ""
 	set fish_bind_mode insert
 	trap "prodlock_return_bindings; fish_user_key_bindings; bind -e -M insert \e" SIGINT
 	read -l -P "prodlock on; is this productive? [y/n] " choice
 	switch $choice
 	    case Y y
-	        commandline $cmd
+		commandline $cmd
 		commandline -f repaint
 		commandline -f execute
 	end
@@ -141,21 +141,21 @@ function execute_prodlock
 	fish_user_key_bindings
 	bind -e -M insert \e
     else
-        commandline -f execute
+	commandline -f execute
     end
 end
 
 function reset_return_bindings
     for mode in insert default visual
-        bind --all -e -M $mode \r
-        bind --all -e -M $mode \n
+	bind --all -e -M $mode \r
+	bind --all -e -M $mode \n
     end
 end
 
 function prodlock_return_bindings
     for mode in insert default visual
-        bind -M $mode \r execute_prodlock
-        bind -M $mode \n execute_prodlock
+	bind -M $mode \r execute_prodlock
+	bind -M $mode \n execute_prodlock
     end
     bind -M normal :q execute_prodlock
     bind -M normal :wq execute_prodlock
