@@ -132,6 +132,7 @@ function execute_prodlock
     set execute 1
     set cmd (commandline)
     if cat ~/.prodlock/profile | string match -rq '^productive'; and test $prodlock_cooldown -le 0
+	set execute 0
 	reset_return_bindings
 	commandline ""
 	commandline -f repaint
@@ -144,8 +145,10 @@ function execute_prodlock
 	fish_user_key_bindings
 	bind -e -M insert \e
 	switch $choice
-	    case N n
-		set execute 0
+	    case Y y
+		set execute 1
+		set prodlock_cooldown 10
+	    case '*'
 		set prodlock_cooldown 0
 	end
     end
@@ -154,8 +157,8 @@ function execute_prodlock
 	commandline $cmd
 	commandline -f repaint
 	commandline -f execute
-	set fish_bind_mode insert
     end
+    set fish_bind_mode insert
 end
 
 function reset_return_bindings
