@@ -8,7 +8,6 @@ setenv EDITOR nvim
 function l
     command ls --color -CF $argv
 end
-
 function ..
     builtin cd $argv ..
 end
@@ -120,28 +119,42 @@ function til
     builtin cd /home/vin/dev/website/blog/; python til.py $argv
 end
 
+set prodlock_cooldown 0
+
 function execute_prodlock
-    if cat ~/.prodlock/profile | string match -rq '^productive'
+    # set cmd_empty (test -n (string trim --chars=\n\r (commandline)))
+
+    if test $prodlock_cooldown -ge 0; and test -n (string trim --chars=\n\r (commandline))
+	set prodlock_cooldown (math $prodlock_cooldown - 1)
+    else
+	set prodlock_cooldown 10
+    end
+    set execute 1
+    set cmd (commandline)
+    if cat ~/.prodlock/profile | string match -rq '^productive'; and test $prodlock_cooldown -le 0
 	reset_return_bindings
-	set cmd (commandline)
 	commandline ""
 	commandline -f repaint
 	echo
 	bind -M insert \e ""
 	set fish_bind_mode insert
 	trap "prodlock_return_bindings; fish_user_key_bindings; bind -e -M insert \e" SIGINT
-	read -l -P "prodlock on; is this productive? [y/n] " choice
-	switch $choice
-	    case Y y
-		commandline $cmd
-		commandline -f repaint
-		commandline -f execute
-	end
+	read -l -n 1 -P "prodlock on; is this productive? [y/n] " choice
 	prodlock_return_bindings
 	fish_user_key_bindings
 	bind -e -M insert \e
-    else
+	switch $choice
+	    case N n
+		set execute 0
+		set prodlock_cooldown 0
+	end
+    end
+
+    if test $execute -ne 0
+	commandline $cmd
+	commandline -f repaint
 	commandline -f execute
+	set fish_bind_mode insert
     end
 end
 
