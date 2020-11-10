@@ -120,6 +120,10 @@ bindsym $mod+space focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
+# Example of how to bind mouse scrolling to i3
+# bindsym --whole-window --border $mod+button4 cat /dev/null
+# bindsym --whole-window --border $mod+button5 cat /dev/null
+
 # focus the child container
 #bindsym $mod+d focus child
 
