@@ -1,5 +1,4 @@
 fenv source ~/.profile
-fenv source ~/.nvm/nvm.sh
 
 eval sh $HOME/.config/gotham/gotham.sh
 
