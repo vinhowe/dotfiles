@@ -4,6 +4,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'vim-airline/vim-airline'
 " Completes quote marks and such for you
 Plug 'jiangmiao/auto-pairs'
+Plug 'plasticboy/vim-markdown'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdcommenter'
 Plug 'machakann/vim-sandwich'
@@ -22,6 +23,7 @@ let g:jedi#completions_enabled = 0
 
 " open the go-to function in split, not another buffer
 let g:jedi#use_splits_not_buffers = "right"
+let g:vim_markdown_new_list_item_indent = 2
 
 let mapleader=","
 " so that we can keep the , key's functionality
