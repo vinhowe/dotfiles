@@ -44,3 +44,11 @@ end
 function til
     builtin cd /home/vinhowe/dev/website/; python til.py $argv
 end
+
+function mpv
+    command mpv -idle -af scaletempo $argv
+end
+
+function mplayer
+    mpv $argv
+end
