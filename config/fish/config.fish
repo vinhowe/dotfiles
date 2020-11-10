@@ -52,3 +52,7 @@ end
 function mplayer
     mpv $argv
 end
+
+function nvm
+    fenv source ~/.nvm/nvm.sh \; nvm $argv
+end
