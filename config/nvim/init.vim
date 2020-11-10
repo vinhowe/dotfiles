@@ -221,3 +221,6 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 " Don't show context (extra lines above and below) on diff
 set diffopt=filler,context:0
+
+" Replay last macro
+nnoremap Q @@
