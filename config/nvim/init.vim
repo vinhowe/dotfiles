@@ -47,11 +47,13 @@ set incsearch " jump to best fit
  " Turn off search highlighting with <CR>.
 nnoremap <CR> :nohlsearch<CR><CR>
 " Tab settings
+" set tabstop=4
+set shiftwidth=4
+set expandtab
+set softtabstop=4
 set autoindent
 filetype plugin indent on
-" set tabstop=4
-" set shiftwidth=4
-" set expandtab
+
 set mouse=a
 
 set background=dark
