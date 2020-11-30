@@ -32,7 +32,8 @@ end
 # Thanks http://christopherroach.com/articles/jupyterlab-desktop-app/
 # I can finally use ctrl + w
 function jupyterlab-app
-    google-chrome --app="http://0.0.0.0:8888/lab?token=$argv"
+    set -q argv[1]; or set argv[1] "0.0.0.0"
+    google-chrome --app="http://$argv[2]:8888/lab?token=$argv[1]"
 end
 
 function icat
