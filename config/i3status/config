@@ -39,7 +39,7 @@ ethernet _first_ {
 }
 
 battery all {
-        format = "🔋 %status %percentage %remaining"
+        format = "🔋 %status %percentage"
 }
 
 disk "/" {
