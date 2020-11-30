@@ -38,7 +38,7 @@ assign [class="Signal"] $ws6
 # startup applications {{{
 
 # background {{{
-exec --no-startup-id picom --config ~/.config/picom/picom.conf -b
+# exec --no-startup-id picom --config ~/.config/picom/picom.conf -b
 exec --no-startup-id nm-applet
 exec --no-startup-id pasystray -r
 exec --no-startup-id redshift-gtk
