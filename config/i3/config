@@ -115,6 +115,9 @@ bindsym $mod+t exec --no-startup-id ~/.local/bin/sputt
 
 # start rofi (a program launcher)
 bindsym $mod+d exec rofi -show run -dpi 1
+
+# kill Chrome GPU process
+bindsym $mod+period exec ~/.local/bin/kcg
 # }}}
 
 # window control {{{

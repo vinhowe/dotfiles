@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+kill $(pgrep -a chrome | grep "gpu-process" | tr -s ' ' | cut -d ' ' -f 1)
