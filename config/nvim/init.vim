@@ -4,6 +4,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'vim-airline/vim-airline'
 " Completes quote marks and such for you
 Plug 'jiangmiao/auto-pairs'
+Plug 'plasticboy/vim-markdown'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdcommenter'
 Plug 'machakann/vim-sandwich'
@@ -17,6 +18,8 @@ Plug 'peitalin/vim-jsx-typescript'
 Plug 'dag/vim-fish'
 
 call plug#end()
+
+let g:vim_markdown_new_list_item_indent = 2
 
 " disable autocompletion, cause we use deoplete for completion
 let g:jedi#completions_enabled = 0
