@@ -30,6 +30,12 @@ set $ws0 "0"
 workspace $ws0 output eDP1
 workspace $ws1 output HDMI1
 
+# sputt
+for_window [class="sputt"] floating enable
+for_window [class="sputt"] resize set 1000 400
+for_window [class="sputt"] move position center
+for_window [class="sputt"] sticky enable
+
 # banish messaging apps to screen 6
 assign [class="Slack"] $ws6
 assign [class="Signal"] $ws6
@@ -103,6 +109,9 @@ bindsym $mod+Shift+g exec systemctl suspend
 
 # start a terminal
 bindsym $mod+Return exec kitty
+
+# sputt
+bindsym $mod+t exec --no-startup-id ~/.local/bin/sputt
 
 # start rofi (a program launcher)
 bindsym $mod+d exec rofi -show run -dpi 1
