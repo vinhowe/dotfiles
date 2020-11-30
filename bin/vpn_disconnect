@@ -1,0 +1,3 @@
+#! /usr/bin/env bash
+
+sudo openvpn3 session-manage --config ~/.ovpn/client.ovpn --disconnect
