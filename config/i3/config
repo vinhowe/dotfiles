@@ -282,7 +282,7 @@ set $gn     #88b090
 set $rd     #e89393
 
 # set some palatable colors   border     background  text
-client.focused                $ge        $ge         $tx
+client.focused                $fg        $fg         $tx
 client.unfocused              $bg        $bg         $ia
 client.focused_inactive       $bg        $bg         $ac
 client.urgent                 $rd        $rd         $tx
@@ -300,7 +300,7 @@ bar {
             statusline          $ac
             separator           $bg
             focused_workspace   $ac        $ac        $tx
-            active_workspace    $ge        $ge        $tx
+            active_workspace    $fg        $fg        $tx
             inactive_workspace  $bg        $bg        $ia
             urgent_workspace    $rd        $rd        $tx
         }
