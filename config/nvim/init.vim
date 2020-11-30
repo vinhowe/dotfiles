@@ -16,6 +16,7 @@ Plug 'tpope/vim-sleuth'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'dag/vim-fish'
+Plug 'dhruvasagar/vim-table-mode'
 
 call plug#end()
 
