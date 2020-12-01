@@ -117,7 +117,10 @@ bindsym $mod+t exec --no-startup-id ~/.local/bin/sputt
 bindsym $mod+d exec rofi -show run -dpi 1
 
 # kill Chrome GPU process
-bindsym $mod+period exec ~/.local/bin/kcg
+bindsym $mod+comma exec ~/.local/bin/kcg
+
+# start emoji picker
+bindsym $mod+period exec rofimoji --rofi-args "-dpi 1"
 # }}}
 
 # window control {{{
