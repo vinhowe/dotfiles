@@ -149,8 +149,6 @@ export GOOGLE_APPLICATION_CREDENTIALS="$HOME/dev/slide-scanner/client_account_co
 
 export PATH="$PATH:$HOME/dev/lastpass-helper"
 
-alias python=python3
-
 export PATH="$PATH:$HOME/Android/Sdk/platform-tools"
 
 # Drop into fish shell
