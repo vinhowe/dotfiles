@@ -30,6 +30,9 @@ set $ws0 "0"
 workspace $ws0 output eDP1
 workspace $ws1 output HDMI1
 
+# feh when using kop
+for_window [class="feh_kop"] floating enable
+
 # sputt
 for_window [class="sputt"] floating enable
 for_window [class="sputt"] resize set 1000 400
