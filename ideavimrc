@@ -1,2 +1,8 @@
-:vmap y ygv<Esc>
 set surround
+
+let mapleader=","
+" we don't clobber reverse live search binding with leader
+nnoremap ,, ,
+
+nmap <leader>rn :action RenameElement<cr>
+vmap y ygv<Esc>
