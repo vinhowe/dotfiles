@@ -52,7 +52,7 @@ assign [class="Signal"] $ws6
 # background {{{
 # exec --no-startup-id picom --config ~/.config/picom/picom.conf -b
 exec --no-startup-id nm-applet
-exec --no-startup-id pasystray -r
+exec --no-startup-id pasystray
 exec --no-startup-id redshift-gtk
 exec --no-startup-id dropbox start
 exec --no-startup-id blueman-applet
