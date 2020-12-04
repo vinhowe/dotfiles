@@ -3,6 +3,7 @@ bass BASH_VERSION= source ~/.profile
 set -Ux EDITOR nvim
 setenv EDITOR nvim
 
+eval sh $HOME/.config/gotham/gotham.sh
 
 function l
     command ls --color -CF $argv
