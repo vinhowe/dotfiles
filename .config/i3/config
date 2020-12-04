@@ -4,6 +4,9 @@
 set $mod Mod4
 set $lock_cmd env XSECURELOCK_DISCARD_FIRST_KEYPRESS=0 XSECURELOCK_FONT="JetBrains Mono" XSECURELOCK_PASSWORD_PROMPT=time_hex XSECURELOCK_IMAGE_DURATION_SECONDS=65536 XSECURELOCK_AUTH_FOREGROUND_COLOR="#98d1ce" XSECURELOCK_AUTH_BACKGROUND_COLOR="#0c1014" XSECURELOCK_AUTH_SOUNDS=1 XSECURELOCK_BLANK_TIMEOUT=300 XSECURELOCK_NO_COMPOSITE=1 XSECURELOCK_PASS_XF86_CONTROL_KEYS=1 xsecurelock
 
+set $mobile_display eDP-1
+set $external_display HDMI-1
+
 # use Mouse+$mod to drag floating windows
 floating_modifier $mod
 # }}}
@@ -27,8 +30,8 @@ set $ws9 "9"
 set $ws0 "0"
 
 # force bind workspace 0 to laptop screen, 1 to external screen for consistency's sake
-workspace $ws0 output eDP1
-workspace $ws1 output HDMI1
+workspace $ws0 output $mobile_display
+workspace $ws1 output $external_display
 
 # feh when using kop
 for_window [class="feh_kop"] floating enable
@@ -249,15 +252,15 @@ bindsym $mod+Shift+m exec --no-startup-id ~/.screenlayout/auto_screen.sh w
 
 # move all workspaces (except 1) to to laptop
 bindsym $mod+m exec --no-startup-id ~/.screenlayout/auto_screen.sh \
-[workspace=$ws0] move workspace to output eDP1; \
-[workspace=$ws2] move workspace to output eDP1; \
-[workspace=$ws3] move workspace to output eDP1; \
-[workspace=$ws4] move workspace to output eDP1; \
-[workspace=$ws5] move workspace to output eDP1; \
-[workspace=$ws6] move workspace to output eDP1; \
-[workspace=$ws7] move workspace to output eDP1; \
-[workspace=$ws8] move workspace to output eDP1; \
-[workspace=$ws9] move workspace to output eDP1; \
+[workspace=$ws0] move workspace to output $mobile_display; \
+[workspace=$ws2] move workspace to output $mobile_display; \
+[workspace=$ws3] move workspace to output $mobile_display; \
+[workspace=$ws4] move workspace to output $mobile_display; \
+[workspace=$ws5] move workspace to output $mobile_display; \
+[workspace=$ws6] move workspace to output $mobile_display; \
+[workspace=$ws7] move workspace to output $mobile_display; \
+[workspace=$ws8] move workspace to output $mobile_display; \
+[workspace=$ws9] move workspace to output $mobile_display; \
 workspace $ws0 \
 reload
 
@@ -302,7 +305,7 @@ bar {
         status_command i3status
 	i3bar_command i3bar -t
 
-        tray_output eDP1
+        tray_output $mobile_display
 
         colors {
             background          $bg
