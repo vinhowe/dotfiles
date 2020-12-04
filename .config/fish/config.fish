@@ -5,6 +5,9 @@ setenv EDITOR nvim
 
 eval sh $HOME/.config/gotham/gotham.sh
 
+# https://github.com/fish-shell/fish-shell/issues/6643#issuecomment-590045287
+set -gx GPG_TTY (tty)
+
 function l
     command ls --color -CF $argv
 end
