@@ -57,7 +57,6 @@ exec --no-startup-id redshift-gtk
 exec --no-startup-id dropbox start
 exec --no-startup-id blueman-applet
 exec --no-startup-id jetbrains-toolbox --minimize
-exec --no-startup-id gnome-pomodoro --no-default-window
 exec --no-startup-id clipit
 exec --no-startup-id xss-lock -n /usr/local/libexec/xsecurelock/dimmer -l -- $lock_cmd
 # make mouse more sensitive with high dpi screen
