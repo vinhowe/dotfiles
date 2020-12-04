@@ -1,5 +1,4 @@
-fenv source ~/.profile
-fenv source ~/.nvm/nvm.sh
+bass BASH_VERSION= source ~/.profile
 
 set -Ux EDITOR nvim
 setenv EDITOR nvim
