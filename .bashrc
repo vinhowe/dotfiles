@@ -52,8 +52,6 @@ fi
 export PATH="$PATH:$HOME/dev/flutter/bin"
 
 # Drop into fish shell
-# if [[ $(ps --no-header --pid=$PPID --format=cmd) != "fish" ]] && [[ "$TERM" == "xterm-kitty" || "$TERM" == "screen" ]]
-if [[ $(ps --no-header --pid=$PPID --format=cmd) != "fish" ]] && [[ "$TERM" == "xterm-kitty" ]]
-then
+if [[ $(ps --no-header --pid=$PPID --format=cmd) != "fish" ]] && [[ "$TERM" =~ ^(xterm.*|ansii)$ ]]; then
     exec fish
 fi
