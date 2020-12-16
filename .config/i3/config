@@ -301,7 +301,7 @@ client.urgent                 $rd        $rd         $tx
 # i3bar config {{{
 bar {
         status_command i3status
-	i3bar_command i3bar -t
+	i3bar_command i3bar
 
         tray_output $display_1
 
