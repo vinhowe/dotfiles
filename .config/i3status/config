@@ -11,13 +11,10 @@ general {
         interval = 1
 }
 
-# order += "ipv6"
 order += "wireless _first_"
 order += "ethernet _first_"
-# order += "battery all"
 order += "disk /"
 order += "load"
-# order += "cpu_usage"
 order += "cpu_temperature 0"
 order += "memory"
 order += "tztime local"
