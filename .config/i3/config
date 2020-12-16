@@ -31,7 +31,6 @@ set $ws0 "0"
 
 # force bind workspace 0 to laptop screen, 1 to external screen for consistency's sake
 workspace $ws0 output $display_1
-workspace $ws1 output $display_2
 
 # feh when using kop
 for_window [class="feh_kop"] floating enable
@@ -244,29 +243,6 @@ bindsym $mod+Shift+grave move container to workspace $ws0
 bindsym Mod1+Tab workspace back_and_forth
 # }}}
 
-# output control {{{
-# reload screen layout
-bindsym $mod+Shift+m exec --no-startup-id ~/.screenlayout/fast_screen.sh w
-
-# move all workspaces (except 1) to to laptop
-bindsym $mod+m exec --no-startup-id ~/.screenlayout/fast_screen.sh \
-[workspace=$ws0] move workspace to output $display_1; \
-[workspace=$ws2] move workspace to output $display_1; \
-[workspace=$ws3] move workspace to output $display_1; \
-[workspace=$ws4] move workspace to output $display_1; \
-[workspace=$ws5] move workspace to output $display_1; \
-[workspace=$ws6] move workspace to output $display_1; \
-[workspace=$ws7] move workspace to output $display_1; \
-[workspace=$ws8] move workspace to output $display_1; \
-[workspace=$ws9] move workspace to output $display_1; \
-workspace $ws0 \
-reload
-
-# move workspaces to different monitors
-bindsym $mod+Shift+braceright move workspace to output right
-bindsym $mod+Shift+braceleft move workspace to output left
-# }}}
-
 # session control {{{
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -318,5 +294,5 @@ bar {
 # }}}
 
 # (do this last) screen output layout {{{
-exec --no-startup-id ~/.screenlayout/auto_screen.sh
+exec --no-startup-id ~/.screenlayout/hidpi_screen.sh
 # }}}
