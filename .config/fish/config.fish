@@ -31,10 +31,6 @@ function icat
     kitty +kitten icat --align=left $argv
 end
 
-function plan
-    builtin cd /home/vin/dev/lifesystem; . venv/bin/activate.fish; python app.py p $argv; deactivate; cd -
-end
-
 function cl
     setxkbmap -option caps:swapescape
     xdotool key Caps_Lock
