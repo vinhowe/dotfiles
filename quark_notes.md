@@ -85,14 +85,13 @@ Unless specified, the Arch package names for the programs I'm using are just the
       systemctl --user start pipewire.socket
       systemctl --user start pipewire.service
       ```
-- Bluetooth support 
+    - Set up bluetooth sink switching hack: https://gist.github.com/tinywrkb/04e7fd644afa9b92d33a3a99ab07ee9e
+- Bluetooth support
   - Install bluez and bluetoothctl: `yay -Syu bluez{,-utils}`
   - Install blueman
   - https://wiki.archlinux.org/index.php/Bluetooth:
   - https://wiki.archlinux.org/index.php/Bluetooth#Auto_power-on_after_boot
   - https://wiki.archlinux.org/index.php/Bluetooth#Discoverable_on_startup
-- https://gist.github.com/tinywrkb/04e7fd644afa9b92d33a3a99ab07ee9e
-- https://unix.stackexchange.com/questions/127443/how-do-i-disable-the-touch-screen-on-my-laptop
 - https://wiki.archlinux.org/index.php/Mouse_acceleration#Persistent_configuration with `/etc/X11/xorg.conf.d/30-touchpad.conf`
 - Disable touchscreen: https://unix.stackexchange.com/a/129603/97339
 - Potential Wi-Fi speed booster: https://wiki.archlinux.org/index.php/Network_configuration/Wireless#Respecting_the_regulatory_domain
