@@ -38,3 +38,5 @@ Unless specified, the Arch package names for the programs I'm using are just the
 - Remove pipewire-pulse udev rule `/etc/udev/rules.d/pipewire-pulse-bt.rules`
 - Install ddcutil for use with [.screenlayout/relative_ddc_brightness.sh](./.screenlayout/relative_ddc_brightness.sh)
 - Manually install Anki from tar bz2 because Arch repos hate it
+- Enable ssh server
+  - Enable/start root-level (no `--user`, use sudo) sshd service (you know the drill)
