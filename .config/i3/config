@@ -258,7 +258,7 @@ bindsym $mod+Shift+e exit
 # theme {{{
 # colors for minimal, usable theme
 set $bg     #020202
-set $fg     #9f9f9f
+set $fg     #7f7f7f
 set $hi     #efef8f
 set $ac     #fafafa
 set $tx     #020202
