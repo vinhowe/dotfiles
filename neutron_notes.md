@@ -40,3 +40,6 @@ Unless specified, the Arch package names for the programs I'm using are just the
 - Manually install Anki from tar bz2 because Arch repos hate it
 - Enable ssh server
   - Enable/start root-level (no `--user`, use sudo) sshd service (you know the drill)
+- Disable dhcpcd service without uninstalling dhcpcd
+  - You probably don't need to do this unless you have NetworkManager and the dhcpcd services running at the same time.
+    Apparently this can create issues--in my case, an openvpn3 connection couldn't resolve DNS for remote hosts.
