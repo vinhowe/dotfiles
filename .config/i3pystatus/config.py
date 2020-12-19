@@ -1,4 +1,5 @@
 from i3pystatus import Status
+import pomodoro
 
 status = Status()
 
@@ -8,6 +9,10 @@ status = Status()
 status.register(
     "clock",
     format="🕒 %a %-d %b %H:%M:%S",
+)
+
+status.register(
+    pomodoro.MpvPomodoro(inactive_format="start pomodoro", sound="/usr/share/sounds/freedesktop/stereo/complete.oga"),
 )
 
 # Shows pulseaudio default sink volume
