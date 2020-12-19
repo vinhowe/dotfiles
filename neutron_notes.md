@@ -43,3 +43,4 @@ Unless specified, the Arch package names for the programs I'm using are just the
 - Disable dhcpcd service without uninstalling dhcpcd
   - You probably don't need to do this unless you have NetworkManager and the dhcpcd services running at the same time.
     Apparently this can create issues--in my case, an openvpn3 connection couldn't resolve DNS for remote hosts.
+- Chrome's PDF viewer is slow on high-DPI screens with integrated graphics, so set Chrome to automatically download PDFs instead: https://www.computerhope.com/issues/ch001114.htm#chrome
