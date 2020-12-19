@@ -1,3 +1,12 @@
+# https://github.com/YingboMa/config/blob/master/zathurarc
+map r reload
+map p print
+map i recolor
+map R rotate
+
+set font "JetBrains Mono 10"
+
 set recolor
 set recolor-keephue
 set scroll-step 100
+set adjust-open "best-fit"
