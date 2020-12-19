@@ -277,8 +277,9 @@ client.urgent                 $rd        $rd         $tx
 
 # i3bar config {{{
 bar {
-        status_command i3status
-	i3bar_command i3bar
+        status_command python ~/.config/i3pystatus/config.py
+        i3bar_command i3bar
+        workspace_buttons yes
 
         tray_output $display_1
 
