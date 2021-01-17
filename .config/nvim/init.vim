@@ -21,6 +21,7 @@ Plug 'dhruvasagar/vim-table-mode'
 call plug#end()
 
 let g:vim_markdown_new_list_item_indent = 2
+let g:vim_markdown_folding_disabled = 1
 
 " disable autocompletion, cause we use deoplete for completion
 let g:jedi#completions_enabled = 0
