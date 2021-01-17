@@ -15,3 +15,8 @@
 [include]
 	; https://stackoverflow.com/questions/1557183/is-it-possible-to-include-a-file-in-your-gitconfig
 	path = ~/.user.gitconfig
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
