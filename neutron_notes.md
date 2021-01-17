@@ -44,3 +44,6 @@ Unless specified, the Arch package names for the programs I'm using are just the
   - You probably don't need to do this unless you have NetworkManager and the dhcpcd services running at the same time.
     Apparently this can create issues--in my case, an openvpn3 connection couldn't resolve DNS for remote hosts.
 - Chrome's PDF viewer is slow on high-DPI screens with integrated graphics, so set Chrome to automatically download PDFs instead: https://www.computerhope.com/issues/ch001114.htm#chrome
+- Create dyndns.service and dyndns.timer to port forward SSH
+- Set up nginx to serve static files
+- Install yarn from arch package and follow https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally#manually-change-npms-default-directory to install global npm package without permissions errors
