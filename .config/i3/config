@@ -257,21 +257,27 @@ bindsym $mod+Shift+e exit
 
 # theme {{{
 # colors for minimal, usable theme
+# background
 set $bg     #020202
-set $fg     #7f7f7f
-set $hi     #efef8f
+# inactive background
+set $in     #121212
+# foreground
+set $fg     #020202
+# accent(?)
 set $ac     #fafafa
-set $tx     #020202
-set $ia     #8f8f8f
-set $be     #8faf9f
-set $yw     #ccdc90
+# text
+set $tx     #fafafa
+# inactive text
+set $it     #8f8f8f
+# green (unused)
 set $gn     #88b090
+# red
 set $rd     #e89393
 
 # set some palatable colors   border     background  text
 client.focused                $fg        $fg         $tx
-client.unfocused              $bg        $bg         $ia
-client.focused_inactive       $bg        $bg         $ac
+client.unfocused              $in        $in         $it
+client.focused_inactive       $in        $in         $ac
 client.urgent                 $rd        $rd         $tx
 # }}}
 
@@ -287,10 +293,10 @@ bar {
             background          $bg
             statusline          $ac
             separator           $bg
-            focused_workspace   $ac        $ac        $tx
-            active_workspace    $fg        $fg        $tx
-            inactive_workspace  $bg        $bg        $ia
-            urgent_workspace    $rd        $rd        $tx
+            focused_workspace   $ac        $ac        $bg
+            active_workspace    $fg        $fg        $bg
+            inactive_workspace  $bg        $bg        $it
+            urgent_workspace    $rd        $rd        $bg
         }
 }
 # }}}
