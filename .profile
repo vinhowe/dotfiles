@@ -7,3 +7,4 @@ if [ -n "$BASH_VERSION" ]; then
 fi
 
 PATH="$HOME/.local/bin:$PATH"
+PATH="$HOME/.npm-global/bin:$PATH"
