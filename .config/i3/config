@@ -52,6 +52,8 @@ assign [class="Signal"] $ws6
 exec --no-startup-id picom --config ~/.config/picom/picom.conf -b
 exec --no-startup-id nm-applet
 exec --no-startup-id pasystray
+# See note below  https://wiki.archlinux.org/index.php/redshift#Automatic_location_based_on_GeoClue2
+exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 exec --no-startup-id redshift-gtk
 exec --no-startup-id dropbox start
 exec --no-startup-id openrgb --server --startminimized
