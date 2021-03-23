@@ -133,6 +133,7 @@ bindsym $mod+period exec rofimoji --rofi-args "-dpi 1"
 
 # kill focused window
 bindsym $mod+Shift+q kill
+bindsym --release XF86Explorer kill
 
 # change focus
 bindsym $mod+h focus left
