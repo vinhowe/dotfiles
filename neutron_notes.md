@@ -47,3 +47,4 @@ Unless specified, the Arch package names for the programs I'm using are just the
 - Create dyndns.service and dyndns.timer to port forward SSH
 - Set up nginx to serve static files
 - Install yarn from arch package and follow https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally#manually-change-npms-default-directory to install global npm package without permissions errors
+- Comment out `load-module module-suspend-on-idle` in /etc/pulse/default.pa
