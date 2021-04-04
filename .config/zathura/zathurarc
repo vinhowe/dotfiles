@@ -6,7 +6,7 @@ map R rotate
 
 set font "JetBrains Mono 10"
 
-set recolor
+# set recolor
 set recolor-keephue
 set scroll-step 100
 set adjust-open "best-fit"
