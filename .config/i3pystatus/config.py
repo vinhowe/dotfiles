@@ -33,6 +33,12 @@ status.register(
     format="🌡️ {temp:.0f}°C",
 )
 
+# Shows memory usage
+status.register(
+    "mem",
+    format="📝 {percent_used_mem:.0f}%",
+)
+
 # Shows disk usage of /
 # Format:
 # 42/128G [86G]
