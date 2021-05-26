@@ -16,14 +16,6 @@ function ..
     builtin cd $argv ..
 end
 
-function per
-    builtin cd /home/vin/dev/lifesystem; . venv/bin/activate.fish; python app.py s; deactivate; cd -
-end
-
-function plan
-    builtin cd /home/vin/dev/lifesystem; . venv/bin/activate.fish; python app.py p $argv; deactivate; cd -
-end
-
 # Thanks http://christopherroach.com/articles/jupyterlab-desktop-app/
 # I can finally use ctrl + w
 function jupyterlab-app
