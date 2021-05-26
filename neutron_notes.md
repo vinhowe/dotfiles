@@ -51,3 +51,4 @@ Unless specified, the Arch package names for the programs I'm using are just the
 - Install `tor`, `torbrowser-launcher`, `torsocks`
   - Enable/start `tor` service
   - Install Tor browser with `torbrowser-launcher`
+- Set up https://github.com/sezanzeb/key-mapper because it works more transparently than setxkbmap
