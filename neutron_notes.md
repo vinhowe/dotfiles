@@ -51,4 +51,6 @@ Unless specified, the Arch package names for the programs I'm using are just the
 - Install `tor`, `torbrowser-launcher`, `torsocks`
   - Enable/start `tor` service
   - Install Tor browser with `torbrowser-launcher`
+- https://qasimk.io/2018/single-application-vpn/#running-openvpn-through-netns
+  - Enable/start [systemd-resolved](https://wiki.archlinux.org/index.php/Systemd-resolved)
 - Set up https://github.com/sezanzeb/key-mapper because it works more transparently than setxkbmap
