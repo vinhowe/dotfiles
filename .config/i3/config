@@ -249,6 +249,9 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws0
 bindsym $mod+Shift+grave move container to workspace $ws0
 
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus scratchpad show
+
 # switch between two most recent workspaces
 bindsym Mod1+Tab workspace back_and_forth
 # }}}
