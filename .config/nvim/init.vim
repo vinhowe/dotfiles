@@ -45,6 +45,8 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+tnoremap <C-\>\ <C-\><C-N>
+
 """" 2. Key Bindings.
 " More convenient movement when lines are wrapped.
 nmap j gj
