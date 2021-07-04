@@ -41,6 +41,10 @@ for_window [class="sputt"] resize set 1000 400
 for_window [class="sputt"] move position center
 for_window [class="sputt"] sticky enable
 
+# dragon
+for_window [class="Dragon"] floating enable
+for_window [class="Dragon"] sticky enable
+
 # banish messaging apps to screen 6
 assign [class="Slack"] $ws6
 assign [class="Signal"] $ws6
