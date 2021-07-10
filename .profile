@@ -6,5 +6,7 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
+VISUAL=nvim
+
 PATH="$HOME/.local/bin:$PATH"
 PATH="$HOME/.npm-global/bin:$PATH"

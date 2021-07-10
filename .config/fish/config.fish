@@ -1,8 +1,5 @@
 bass BASH_VERSION= source ~/.profile
 
-set -Ux EDITOR nvim
-setenv EDITOR nvim
-
 # https://github.com/fish-shell/fish-shell/issues/6643#issuecomment-590045287
 set -gx GPG_TTY (tty)
 
@@ -47,8 +44,6 @@ function brb
 end
 
 set fish_greeting
-
-set -Ux EDITOR vim
 
 function fish_user_key_bindings
     for mode in insert default visual
