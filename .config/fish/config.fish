@@ -15,7 +15,7 @@ function jupyterlab-app
 end
 
 function cms
-    builtin cd /home/vin/dev/website/blog; gatsby develop; cd -
+    builtin cd /home/vin/dev/website/blog/; gatsby develop; cd -
 end
 
 function emacs
