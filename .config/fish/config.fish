@@ -14,15 +14,6 @@ function jupyterlab-app
     google-chrome --app="http://$argv[2]:8888/lab?token=$argv[1]"
 end
 
-function icat
-    kitty +kitten icat --align=left $argv
-end
-
-function cl
-    setxkbmap -option caps:swapescape
-    xdotool key Caps_Lock
-end
-
 function cms
     builtin cd /home/vin/dev/website/blog; gatsby develop; cd -
 end
@@ -31,15 +22,15 @@ function emacs
     command emacs -nw $argv
 end
 
-function te
-    command touch $argv; typora $argv
+function til
+    builtin cd /home/vin/dev/website/blog/; python til.py $argv
 end
 
-function brb
-    command fish -c "cd ~/dev/berightback/; ./fullscreen_lock.sh"
+function fish_greeting
+    echo
+    echo "👋 welcome to neutron"
+    echo
 end
-
-set fish_greeting
 
 function fish_user_key_bindings
     for mode in insert default visual
@@ -49,12 +40,4 @@ function fish_user_key_bindings
     fish_default_key_bindings -M default
 
     fish_vi_key_bindings default
-end
-
-function icat
-    kitty +kitten icat --align=left $argv
-end
-
-function til
-    builtin cd /home/vin/dev/website/blog/; python til.py $argv
 end
