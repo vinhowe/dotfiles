@@ -7,10 +7,6 @@ function l
     command ls --color -CF $argv
 end
 
-function ..
-    builtin cd $argv ..
-end
-
 # Thanks http://christopherroach.com/articles/jupyterlab-desktop-app/
 # I can finally use ctrl + w
 function jupyterlab-app
