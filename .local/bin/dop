@@ -1,0 +1,3 @@
+#!/usr/bin/env fish
+
+dragon (xclip -sel clip -t image/png -o | psub -s .png)
