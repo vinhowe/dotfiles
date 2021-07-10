@@ -7,6 +7,7 @@ function l
     command ls --color -CF $argv
 end
 
+# TODO: Move this into ~/.local/bin/
 # Thanks http://christopherroach.com/articles/jupyterlab-desktop-app/
 # I can finally use ctrl + w
 function jupyterlab-app
