@@ -29,7 +29,7 @@ end
 
 function fish_greeting
     echo
-    echo "👋 welcome to neutron"
+    echo "👋 welcome to naga"
     echo
 end
 
@@ -44,3 +44,8 @@ function fish_user_key_bindings
 
     fish_vi_key_bindings default
 end
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+eval /home/vin/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+# <<< conda initialize <<<
