@@ -8,6 +8,8 @@ set number
 " Enables mouse support. Note that on Mac OS X this doesn't work well on the
 " default terminal.
 set mouse=a
+map <ScrollWheelUp> <C-Y>
+map <ScrollWheelDown> <C-E>
 
 """" 2. Key Bindings.
 " More convenient movement when lines are wrapped.
