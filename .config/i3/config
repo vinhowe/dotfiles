@@ -71,8 +71,6 @@ exec --no-startup-id xss-lock -n /usr/local/libexec/xsecurelock/dimmer -l -- $lo
 exec --no-startup-id $HOME/.config/display-setup.sh
 # make mouse more sensitive with high dpi screen
 exec --no-startup-id xinput --set-prop "Logitech USB Optical Mouse" 311 0.8
-# swap caps lock and escape (disabled because I use https://github.com/sezanzeb/key-mapper, which works more transparently)
-# exec --no-startup-id setxkbmap -option caps:swapescape
 # }}}
 
 # foreground {{{
