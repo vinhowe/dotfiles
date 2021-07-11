@@ -1,5 +1,5 @@
 """" 1. Vim Behaviour.
-" Use filetype-based syntax hilighting, ftplugins, and indentation.
+" Use filetype-based syntax highlighting, ftplugins, and indentation.
 syntax on
 filetype plugin indent on
 " Use numbering. Don't use relative numbering as this is slow (especially in
