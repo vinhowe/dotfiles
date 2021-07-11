@@ -8,7 +8,9 @@ fi
 
 VISUAL=nvim
 
-PATH="$HOME/.local/bin:$PATH"
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
 
 PATH="$PATH:$HOME/dev/flutter/bin"
 PATH="$PATH:$HOME/Android/Sdk/platform-tools"
