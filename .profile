@@ -8,5 +8,8 @@ fi
 
 VISUAL=nvim
 
-PATH="$HOME/.local/bin:$PATH"
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
 PATH="$HOME/.npm-global/bin:$PATH"
