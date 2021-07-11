@@ -17,7 +17,7 @@
     (org-w3m org-bbdb org-bibtex org-docview org-gnus org-info org-irc org-mhe org-rmail org-eww org-habit)))
  '(package-selected-packages
    (quote
-    (helm-descbinds ir-black-theme dash-functional org-mind-map org-bullets free-keys org-journal orgalist org-edna)))
+    (ir-black-theme dash-functional org-mind-map org-bullets free-keys org-journal orgalist org-edna)))
  '(safe-local-variable-values (quote ((buffer-auto-save-file-name)))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -235,9 +235,6 @@ There are two things you can do about this warning:
 (require 'ox-org)
 (require 'org-mind-map)
 
-;; (tool-bar-mode -1)
-;; (menu-bar-mode -1)
-
 (load-theme 'ir-black t)
 (set-face-attribute 'default (selected-frame) :height 100)
 
@@ -245,3 +242,7 @@ There are two things you can do about this warning:
 (global-set-key (kbd "H-j") 'next-line)
 (global-set-key (kbd "H-h") 'left-char)
 (global-set-key (kbd "H-l") 'right-char)
+(tool-bar-mode -1)
+(menu-bar-mode -1)
+
+(load-theme 'ir-black t)
