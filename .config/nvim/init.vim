@@ -240,6 +240,9 @@ xmap ig <Plug>(coc-git-chunk-inner)
 omap ag <Plug>(coc-git-chunk-outer)
 xmap ag <Plug>(coc-git-chunk-outer)
 
+" Don't show context (extra lines above and below) on diff
+set diffopt=filler,context:0
+
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 
