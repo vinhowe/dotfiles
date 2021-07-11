@@ -33,6 +33,10 @@ function fish_greeting
     echo
 end
 
+function mpv
+    command mpv -idle -af scaletempo $argv
+end
+
 function fish_user_key_bindings
     fzf_key_bindings
 
