@@ -44,6 +44,7 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" Make it easier to get out of a terminal
 tnoremap <C-\>\ <C-\><C-N>
 
 """" 2. Key Bindings.
