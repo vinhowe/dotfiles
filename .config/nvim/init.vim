@@ -243,5 +243,8 @@ xmap ag <Plug>(coc-git-chunk-outer)
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 
+" Replay last macro
+nnoremap Q @@
+
 " Hide line numbers in nvim terminal
 autocmd TermOpen * setlocal nonumber norelativenumber
